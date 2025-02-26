@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: easy-post-submission\n"
-"POT-Creation-Date: 2025-02-18 20:17+0700\n"
+"POT-Creation-Date: 2025-02-26 20:05+0700\n"
 "PO-Revision-Date: 2017-07-16 09:08+0700\n"
 "Last-Translator: \n"
 "Language-Team: ThemeRuby <support@themeruby.com>\n"
@@ -711,7 +711,7 @@ msgid "Data is invalid. Please review the information."
 msgstr ""
 
 #: includes/description-strings.php:83
-msgid "The maximum file upload size in MB."
+msgid "Maximum file upload size in KB. Set to 0 for no limit."
 msgstr ""
 
 #: includes/description-strings.php:84
@@ -1732,50 +1732,50 @@ msgstr ""
 msgid "Are you sure you want to reload the page without saving your changes?"
 msgstr ""
 
-#: includes/shortcodes.php:189
+#: includes/shortcodes.php:190
 msgid "Easy Post Submission Post Manager Placeholder"
 msgstr ""
 
-#: includes/shortcodes.php:208
+#: includes/shortcodes.php:209
 msgid "Easy Post Submission Form Placeholder"
 msgstr ""
 
-#: includes/shortcodes.php:225
+#: includes/shortcodes.php:226
 msgid "Easy Post Submission Edit Post Form Placeholder"
 msgstr ""
 
-#: includes/shortcodes.php:237
+#: includes/shortcodes.php:238
 msgid "Post Not Found"
 msgstr ""
 
-#: includes/shortcodes.php:238
+#: includes/shortcodes.php:239
 msgid ""
 "The post submission you are trying to edit does not exist. If you believe this is an error, please contact support for "
 "assistance."
 msgstr ""
 
-#: includes/shortcodes.php:245
+#: includes/shortcodes.php:246
 msgid "Permission Denied"
 msgstr ""
 
-#: includes/shortcodes.php:246
+#: includes/shortcodes.php:247
 msgid ""
 "You do not have permission to edit this submission. If you believe this is an error, please contact support for "
 "assistance."
 msgstr ""
 
-#: includes/shortcodes.php:255
+#: includes/shortcodes.php:256
 msgid "Data Error"
 msgstr ""
 
-#: includes/shortcodes.php:256
+#: includes/shortcodes.php:257
 msgid "We could not find the form associated with this post. Please reach out to support for further assistance."
 msgstr ""
 
-#: includes/shortcodes.php:281
+#: includes/shortcodes.php:282
 msgid "Information"
 msgstr ""
 
-#: includes/shortcodes.php:357
+#: includes/shortcodes.php:358
 msgid "Unable to locate the submission form settings."
 msgstr ""

@@ -1,7 +1,8 @@
 <?php
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 /**
- * Easy Post Submission
- *
  * Plugin Name:       Easy Post Submission
  * Plugin URI:        https://themeruby.com/
  * Description:       Enable users to submit posts and manage profiles from the front-end of your site. Ideal for news, magazines, and creative platforms to collect ideas and contributions easily.
@@ -9,7 +10,7 @@
  * Author:            ThemeRuby
  * License:           GPLv3
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
- * Version:           1.0.0
+ * Version:           1.1.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author URI:        https://themeruby.com
@@ -18,14 +19,14 @@
  *
  * @package           easy-post-submission
  *
- * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  */
 
-// Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
-
-define( 'EASY_POST_SUBMISSION_VERSION', '1.0.0' );
+define( 'EASY_POST_SUBMISSION_VERSION', '1.1.0' );
 define( 'EASY_POST_SUBMISSION_BASENAME', plugin_basename( __FILE__ ) );
 define( 'EASY_POST_SUBMISSION_URL', plugins_url( '/', __FILE__ ) );
 define( 'EASY_POST_SUBMISSION_REL_PATH', dirname( EASY_POST_SUBMISSION_BASENAME ) );

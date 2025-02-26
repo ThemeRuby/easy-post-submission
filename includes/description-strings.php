@@ -80,7 +80,7 @@ if ( ! function_exists( 'easy_post_submission_admin_description_strings' ) ) {
 			'invalidTitle'                         => esc_html__( 'Title is invalid. Please check the input.', 'easy-post-submission' ),
 			'validData'                            => esc_html__( 'Data is valid.', 'easy-post-submission' ),
 			'invalidData'                          => esc_html__( 'Data is invalid. Please review the information.', 'easy-post-submission' ),
-			'uploadFileSizeLimitDesc'              => esc_html__( 'The maximum file upload size in MB.', 'easy-post-submission' ),
+			'uploadFileSizeLimitDesc'              => esc_html__( 'Maximum file upload size in KB. Set to 0 for no limit.', 'easy-post-submission' ),
 			'defaultFeaturedImage'                 => esc_html__( 'Default Featured Image', 'easy-post-submission' ),
 			'defaultFeaturedImageDesc'             => esc_html__( 'The default image to use if no featured image is provided.', 'easy-post-submission' ),
 			'categories'                           => esc_html__( 'Categories', 'easy-post-submission' ),

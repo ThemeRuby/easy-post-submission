@@ -99,7 +99,8 @@ if ( ! class_exists( 'Easy_Post_Submission_Form_Shortcode', false ) ) {
 				$post_id = get_query_var( 'rbsm-id', null );
 
 				if ( ! empty( $post_id ) ) {
-					$form_id                                 = get_post_meta( $post_id, 'rbsm_form_id', true );
+					$form_id = Easy_Post_Submission_Client_Helper::get_instance()->get_form_id_by_submission( $post_id );
+
 					self::$initial_localize_data['userPost'] = $this->get_user_post( $post_id );
 				}
 			}
@@ -247,9 +248,9 @@ if ( ! class_exists( 'Easy_Post_Submission_Form_Shortcode', false ) ) {
 				] );
 			}
 
-			$form_settings_id = Easy_Post_Submission_Client_Helper::get_instance()->get_form_id_by_submission( $post_id );
+			$form_submission_id = Easy_Post_Submission_Client_Helper::get_instance()->get_form_id_by_submission( $post_id );
 
-			if ( empty( $form_settings_id ) ) {
+			if ( empty( $form_submission_id ) ) {
 				return $this->get_error_box( [
 					'icon'  => 'mdi-database-off-outline',
 					'title' => esc_html__( 'Data Error', 'easy-post-submission' ),
@@ -429,7 +430,7 @@ if ( ! class_exists( 'Easy_Post_Submission_Form_Shortcode', false ) ) {
 				}, $tags_raw );
 			}
 
-			$form_submission_id     = get_post_meta( $post_id, 'rbsm_form_id', true );
+			$form_submission_id     = Easy_Post_Submission_Client_Helper::get_instance()->get_form_id_by_submission( $post_id );
 			$custom_field_meta_keys = $this->get_custom_field_meta_keys( $form_submission_id );
 			$custom_fields          = $this->get_custom_field_data( $post_id, $custom_field_meta_keys );
 			$user_name              = $this->get_user_name( $post_id );

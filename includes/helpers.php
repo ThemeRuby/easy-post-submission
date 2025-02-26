@@ -253,14 +253,14 @@ if ( ! class_exists( 'Easy_Post_Submission_Client_Helper', false ) ) {
 		}
 
 		/**
-		 * Retrieves the form ID associated with a given post ID.
+		 * Get the form ID associated with a submitted post.
 		 *
-		 * This function fetches the form ID for a specific post by its ID. It may return `false`
-		 * if no form is found or if the post ID does not have an associated form.
+		 * This function retrieves the form ID linked to a specific post submission. If the form ID is invalid or
+		 * not found, it falls back to the default form submission ID (if set). If no valid form ID is found, it returns false.
 		 *
-		 * @param int $post_id The ID of the post to fetch the form ID for.
+		 * @param int $post_id The ID of the submitted post.
 		 *
-		 * @return mixed|false The form ID if found, or `false` if no form is associated with the post.
+		 * @return int|false The form ID if found and valid, otherwise false.
 		 */
 		public function get_form_id_by_submission( $post_id ) {
 
@@ -270,11 +270,15 @@ if ( ! class_exists( 'Easy_Post_Submission_Client_Helper', false ) ) {
 
 			$form_id = get_post_meta( $post_id, 'rbsm_form_id', true );
 
-			if ( empty( $form_id ) && ! empty( self::$post_manager_settings['user_profile']['form_submission_default_id'] ) ) {
+			if ( $this->check_form_id_exist( (int) $form_id ) ) {
+				return $form_id;
+			}
+
+			if ( ! empty( self::$post_manager_settings['user_profile']['form_submission_default_id'] ) ) {
 				$form_id = self::$post_manager_settings['user_profile']['form_submission_default_id'];
 			}
 
-			if ( ! $this->check_form_id_exist( (int) $form_id ) ) {
+			if ( empty( $form_id ) || ! $this->check_form_id_exist( (int) $form_id ) ) {
 				return false;
 			}
 

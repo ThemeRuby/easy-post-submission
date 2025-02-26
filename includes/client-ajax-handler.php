@@ -804,7 +804,7 @@ if ( ! class_exists( 'Easy_Post_Submission_Client_Ajax_Handler', false ) ) {
 
 			if ( $filesize_limit > 0 && ! empty( $featured_image_file['size'] ) ) {
 
-				$limit_in_bytes      = $filesize_limit * 1024 * 1024;
+				$limit_in_bytes      = $filesize_limit * 1024;
 				$uploaded_image_size = isset( $featured_image_file['size'] ) ? $featured_image_file['size'] : 0;
 
 				if ( $uploaded_image_size > 0 && $uploaded_image_size > $limit_in_bytes ) {
@@ -1843,13 +1843,16 @@ if ( ! class_exists( 'Easy_Post_Submission_Client_Ajax_Handler', false ) ) {
 		 */
 		private function get_form_settings_by_post_id( $post_id ) {
 
-			$form_submission_id = get_post_meta( $post_id, 'rbsm_form_id', true );
+			$form_submission_id = Easy_Post_Submission_Client_Helper::get_instance()->get_form_id_by_submission( $post_id );
+
 			if ( ! $form_submission_id ) {
 				return [
 					'status' => false,
 					'data'   => null,
 				];
 			}
+
+
 			$form_submission = $this->get_form_settings_by_id( $form_submission_id );
 			if ( ! $form_submission ) {
 				return [
