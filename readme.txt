@@ -1,10 +1,10 @@
 === Easy Post Submission - Frontend Posting, Guest Publishing & Submit Content for WordPress ===
 Contributors: themeruby
-Tags: frontend submit, user profile, guest submission, idea collection, contribution
+Tags: frontend post, guest post, anonymous post, user post, public post
 Requires at least: 6.3
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -33,6 +33,10 @@ A powerful plugin designed to user-generated content on your website. Perfect fo
 * [Post Management](https://foxiz.themeruby.com/journal/your-submission-management/)
 * [Edit Post](https://foxiz.themeruby.com/journal/edit-post/?post-id=252/)
 
+== Documentation ==
+
+Access the plugin documentation for usage instructions: [here](https://docs.themeruby.com/easy-post-submission/)
+
 == External Services ==
 
 This plugin connects to an API to obtain reCAPTCHA information. It is needed to verify humans when submitting and to avoid spam.
@@ -50,7 +54,7 @@ To Easy Post Submission, follow these steps:
 4. Navigate to Dashboard > Easy Post Submission.
 5. A "Get Started" panel will appear. Choose the default pages and form to import.
 6. Click "Complete" to finish the setup.
-7. Read the [Documentation](https://docs.themeruby.com/easy-post-submission/ to get started.
+7. Read the [Documentation](https://docs.themeruby.com/easy-post-submission/) to get started.
 
 
 == Screenshots ==
@@ -86,6 +90,10 @@ Yes or no, depending on your choice in the settings.
 If you want to contribute, visit our [GitHub Repository](https://github.com/ThemeRuby/easy-post-submission) and see where you can help.
 
 == Changelog ==
+
+= 1.2.0 =
+* Fixed: Issue with form submission when multiple tag selection is disabled.
+* Fixed: Issue with adding content images.
 
 = 1.1.0 =
 * Improved: Changed the featured image limit setting to KB, allowing limits below 1MB.

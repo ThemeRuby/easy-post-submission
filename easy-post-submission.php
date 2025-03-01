@@ -6,11 +6,11 @@ defined( 'ABSPATH' ) || exit;
  * Plugin Name:       Easy Post Submission
  * Plugin URI:        https://themeruby.com/
  * Description:       Enable users to submit posts and manage profiles from the front-end of your site. Ideal for news, magazines, and creative platforms to collect ideas and contributions easily.
- * Tags:              frontend submit, user profile, guest submission, idea collection, contribution
+ * Tags:              frontend post, guest post, anonymous post, user post, public post
  * Author:            ThemeRuby
  * License:           GPLv3
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
- * Version:           1.1.0
+ * Version:           1.2.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author URI:        https://themeruby.com
@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
  * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  */
 
-define( 'EASY_POST_SUBMISSION_VERSION', '1.1.0' );
+define( 'EASY_POST_SUBMISSION_VERSION', '1.2.0' );
 define( 'EASY_POST_SUBMISSION_BASENAME', plugin_basename( __FILE__ ) );
 define( 'EASY_POST_SUBMISSION_URL', plugins_url( '/', __FILE__ ) );
 define( 'EASY_POST_SUBMISSION_REL_PATH', dirname( EASY_POST_SUBMISSION_BASENAME ) );

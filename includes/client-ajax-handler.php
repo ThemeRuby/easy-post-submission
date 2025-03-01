@@ -218,7 +218,7 @@ if ( ! class_exists( 'Easy_Post_Submission_Client_Ajax_Handler', false ) ) {
 
 			$image_urls  = [];
 			$image_ids   = [];
-			$typePattern = '/data:image\/([a-zA-Z0-9]+);base64/';
+			$typePattern = '/image\/([a-zA-Z0-9]+);base64/';
 
 			$base64FullTags = $base64ImageData[0];
 			$base64Contents = $base64ImageData[1];
@@ -578,7 +578,7 @@ if ( ! class_exists( 'Easy_Post_Submission_Client_Ajax_Handler', false ) ) {
 		 *               will be `false`, and a message with the error (e.g., exceeding the allowed size) will be returned.
 		 */
 		private function validate_size_base64_images( $max_image_size_allowed, $content ) {
-			$base64_pattern = '/<img[^>]+src="data:image\/[^;]+;base64,([^"]+)"[^>]*>/i';
+			$base64_pattern = '/<img[^>]+src="image\/[^;]+;base64,([^"]+)"[^>]*>/i';
 
 			preg_match_all( $base64_pattern, $content, $base64_matches );
 
@@ -1244,7 +1244,7 @@ if ( ! class_exists( 'Easy_Post_Submission_Client_Ajax_Handler', false ) ) {
 			}
 
 			if ( empty( $user_email ) ) {
-				return esc_html__('The user email is empty', 'easy-post-submission');
+				return esc_html__( 'The user email is empty', 'easy-post-submission' );
 			}
 
 			$subject = (string) ( $form_settings_result['email']['post_submit_notification']['subject'] ?? esc_html__( 'The post ', 'easy-post-submission' ) . $title . esc_html__( ' has just submitted.', 'easy-post-submission' ) );
@@ -1447,7 +1447,7 @@ if ( ! class_exists( 'Easy_Post_Submission_Client_Ajax_Handler', false ) ) {
 		 */
 		private function try_convert_images_in_content( $content, $title ) {
 
-			$base64_pattern = '/<img[^>]+src="data:image\/[^;]+;base64,([^"]+)"[^>]*>/i';
+			$base64_pattern = '/<img[^>]+src="image\/[^;]+;base64,([^"]+)"[^>]*>/i';
 
 			preg_match_all( $base64_pattern, $content, $base64_matches );
 
